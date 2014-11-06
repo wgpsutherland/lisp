@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "mpc.h"
 
 /* If we are compiling on windows then do this */
 #ifdef _WIN32
@@ -26,6 +27,11 @@ void add_history(char* unused) {}
 #endif
 
 int main(int argc, char** argv) {
+
+    /* Create some parsers */
+    mpc_parser_t* Number = mpc_new("number");
+    mpc_parser_t* Operator = mpc_new("operator");
+    mpc_parser_t* Expr = mpc_new("")
 
     /* Version and exit information for the user */
     puts("Lispy version 0.0.0.0.1");
